@@ -36,6 +36,11 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
+
+Devloped by : MITHUN S
+
+Reg no : 212224240088
+
 ```python
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
@@ -137,7 +142,13 @@ httpd.serve_forever()
 ```
 
 ## OUTPUT:
+
+Refer to the following image to view the output of the program.
+
 <img width="1921" height="1201" alt="image" src="https://github.com/user-attachments/assets/f07daeb5-27b0-437d-952d-a36dc309dee8" />
+
+TERMINAL
+
 <img width="834" height="457" alt="image" src="https://github.com/user-attachments/assets/0658d7a2-f7b1-479d-b4ed-bb2660573bee" />
 
 
