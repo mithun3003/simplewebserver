@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date: 28/08/2025
+## Date: 29/08/2025
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the list of protocols in TCP/IP Protocol Suite.
@@ -43,7 +43,8 @@ Reg no : 212224240088
 
 ```python
 from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
+
+content = """"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,28 +129,35 @@ content = """
     </table>
 </body>
 """
-class myhandler(BaseHTTPRequestHandler):
+
+class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
+        print("Get request received...")
+        self.send_response(200) 
+        self.send_header("content-type", "text/html")       
         self.end_headers()
         self.wfile.write(content.encode())
-server_address = ('',8000)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
+
+print("This is my webserver") 
+server_address =('',8000)
+httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
+
+   
 ```
 
 ## OUTPUT:
 
 Refer to the following image to view the output of the program.
 
-<img width="1921" height="1201" alt="image" src="https://github.com/user-attachments/assets/f07daeb5-27b0-437d-952d-a36dc309dee8" />
+![alt text](<Screenshot 2025-08-29 110750.png>)
+
 
 TERMINAL
 
-<img width="834" height="457" alt="image" src="https://github.com/user-attachments/assets/0658d7a2-f7b1-479d-b4ed-bb2660573bee" />
+![alt text](<Screenshot 2025-08-29 110838.png>)
+
+
 
 
 ## RESULT:
